@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+    	document.write("<br><hr><br>");
+    }
+
+    function mostra(frase) {
+        document.write("<big>" + frase + "</big>");
+        pulaLinha();
+    }
+
+    var nome = prompt("Qual o seu nome?")
+    var time = prompt("Olá, " + nome + " ! Qual o seu time do coração?")
+    var vitorias = parseInt(prompt("Quantas vitórias tem o " + time + " ?"));
+    var empates = parseInt(prompt("E quantos empates?"));
+    var pontos = vitorias * 3 + empates;
+
+    mostra("O seu " + time + " tem " + pontos + " pontos");
+
+    if(pontos > 18) {
+        mostra("Ano passado nesse período do campeonato, o seu " + time + " estava com 28 pontos! O trem tá bão pro seu " + time + " hein??!");
+    }
+
+    if(pontos < 18) {
+        mostra("Ano passado nesse período do campeonato, o seu " + time + " já estava com 28 pontos... É... o trem não tá bão pro seu " + time + " não, viu...");
+    }
+
+    if(pontos == 18) {
+        mostra("Ano passado nesse período do campeonato, o seu " + time + " tb estava com 28 pontos. A continuar assim seu " + time + " vai parar no mesmo lugar do ano passado.");
+    }
+
+</script>
